@@ -1,0 +1,42 @@
+@mixin sp {
+    @media screen and (max-width: $BREAKPOINT_MOBILE) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $BREAKPOINT_TABLET) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: $BREAKPOINT_MOBILE) {
+        @content;
+    }
+}
+
+@mixin pc-wide {
+    @media screen and (min-width: $BREAKPOINT_PC_WIDE) {
+        @content;
+    }
+}
+
+@mixin content-header {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    background: $COLOR_GREEN;
+    @include tablet {
+        font-size: 18px;
+        padding: 14px;
+    }
+    @include sp {
+        font-size: 15px;
+        padding: 12px;
+        line-height: 1.3;
+    }
+}

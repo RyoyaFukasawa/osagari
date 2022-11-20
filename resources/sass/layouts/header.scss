@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: $GRAYISH_WHITE;
+    height: $HEADER_Ht;
+    border-bottom: 1px solid $GRAYISH_WHITE;
+    position: relative;
+
+    .icon {
+        width: 180px;
+        &-wrap{
+            margin-left: 30px;
+            width: 180px;
+        }
+    }
+
+
+    .btn {
+        color: white;
+        margin-right: 10px;
+
+        &:hover {
+            color: white;
+        }
+
+        &-wrap {
+            display: flex;
+            position: absolute;
+            right: 0px;
+        }
+
+        &-login {
+            background: $YELLOW;
+        }
+
+        &-register {
+            background: $YELLOW_GREEN;
+        }
+
+        &-disable {
+            background-color: $DISABLE;
+            pointer-events: none;
+        }
+
+    }
+}

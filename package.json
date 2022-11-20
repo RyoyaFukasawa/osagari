@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "sass-watch": "sass --watch resources/sass/app.scss:public/assets/css/app.css"
     },
     "devDependencies": {
         "axios": "^1.1.2",
@@ -10,5 +11,16 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^3.1.2",
+        "pinia": "^2.0.24",
+        "sass": "^1.56.1",
+        "sass-loader": "^13.2.0",
+        "vee-validate": "^4.7.3",
+        "vue": "^3.2.45",
+        "vue-loader": "^17.0.1",
+        "vue-router": "^4.1.6",
+        "yup": "^0.32.11"
     }
 }

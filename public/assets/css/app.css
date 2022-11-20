@@ -1,0 +1,428 @@
+#app {
+  height: 100%;
+}
+
+.background {
+  background-color: white;
+}
+
+.btn {
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+}
+.btn:hover {
+  color: white;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.warning {
+  font-size: 12px;
+}
+
+.text-center {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 16px;
+  font-family: "BIZ UDGothic";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: #000;
+}
+a:active {
+  color: #000;
+}
+a:focus {
+  outline: none;
+}
+a:hover {
+  color: #000;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+main {
+  height: calc(100% - 65px);
+}
+main .btn-search {
+  padding: 8px 10px 8px 10px;
+  background-color: #006f37;
+}
+@media screen and (max-width: 780px) {
+  main .btn-search {
+    width: 100%;
+  }
+}
+main .btn-register {
+  background: #37ad63;
+  display: block;
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+main .btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+  padding: 0 8px;
+  background-color: #fff;
+  width: 100%;
+}
+main .btn-google-img {
+  width: 25px;
+  position: absolute;
+  left: 15px;
+}
+main .btn-google-text {
+  font-family: "Roboto", sans-serif;
+}
+main .content-wrap {
+  width: 35%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+main .input {
+  display: block;
+  width: 100%;
+  padding: 10px 5px;
+  outline-color: #37ad63;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+main .input-wrap:nth-of-type(n+2) {
+  margin-top: 20px;
+}
+main .input-title {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.9411764706);
+  height: 65px;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.9411764706);
+  position: relative;
+}
+header .icon {
+  width: 180px;
+}
+header .icon-wrap {
+  margin-left: 30px;
+  width: 180px;
+}
+header .btn {
+  color: white;
+  margin-right: 10px;
+}
+header .btn:hover {
+  color: white;
+}
+header .btn-wrap {
+  display: flex;
+  position: absolute;
+  right: 0px;
+}
+header .btn-login {
+  background: #fcd356;
+}
+header .btn-register {
+  background: #37ad63;
+}
+header .btn-disable {
+  background-color: rgba(141, 141, 141, 0.5529411765);
+  pointer-events: none;
+}
+
+.search-wrap {
+  flex-direction: column;
+  padding: 5% 0;
+}
+@media screen and (max-width: 780px) {
+  .search-wrap {
+    height: calc(100% - 65px);
+  }
+}
+.search-form {
+  width: 65%;
+}
+.search-group {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 780px) {
+  .search-group {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.search-box {
+  padding: 8px 10px 8px 10px;
+  background-color: white;
+  border: 2px #37ad63 solid;
+  border-radius: 15px;
+  outline-color: #006f37;
+  margin-right: 5px;
+}
+@media screen and (max-width: 780px) {
+  .search-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+.home-icon {
+  width: 25%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 780px) {
+  .home-icon {
+    width: 70%;
+  }
+}
+
+.auth-input-wrap {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.auth-input {
+  position: relative;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin-top: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+.auth-input:focus {
+  outline: solid 1px #37ad63;
+}
+
+.news-wrap {
+  border-bottom: solid 1px rgba(240, 240, 240, 0.9411764706);
+  min-height: 60px;
+}
+.news-content {
+  width: 85%;
+  margin: 10px 0;
+}
+.news-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.news-icon-wrap {
+  width: 15%;
+}
+.news-time-wrap {
+  margin-top: 5px;
+}
+.news-time {
+  color: #585858;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=app.css.map */

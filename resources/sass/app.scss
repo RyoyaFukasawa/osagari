@@ -1,0 +1,21 @@
+// Variables
+@import "./variables";
+
+// Global
+@import "./global";
+
+// Reset Css
+@import "./reset";
+
+// Mixin
+@import './mixin';
+
+// Layout
+@import "layouts/main";
+@import "layouts/header";
+@import "layouts/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/register";
+@import "pages/news";

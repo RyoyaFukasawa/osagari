@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['guest']], function () {
+    // google認証
+    Route::get('/auth/redirect', [AuthController::class, 'redirectToGoogle']);
+
+    Route::get('/callback/google', [AuthController::class, 'handleGoogleCallback']);
+
+    Route::get('/guest/{any?}/{param?}', function () {
+        return view('web.guest');
+    })->where('all', '.*')->name('guest');
+});
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/{all?}', function () {
+        return view('web.member');
+    })->where('all', '.*')->name('member');
 });
