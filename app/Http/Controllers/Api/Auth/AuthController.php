@@ -14,7 +14,7 @@ class AuthController extends Controller
     {
         $user = new User();
         $user->fill($request->all())->save();
-        Auth::login($user);
+        Auth::login($user,true);
         $request->session()->regenerate();
 
         return $this->createResponse();

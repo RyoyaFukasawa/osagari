@@ -56,6 +56,13 @@ return [
             'throw' => false,
         ],
 
+        'admin' => [
+            'driver' => 'local',
+            'url' => env('AWS_URL'),
+            'route' => public_path('uploads'),
+            'visibility' => 'public',
+        ]
+
     ],
 
     /*

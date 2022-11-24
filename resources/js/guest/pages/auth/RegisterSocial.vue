@@ -27,17 +27,6 @@
                     <span class="warning">※変更できません。</span>
                     <span class="error-message"><br>{{ errors.email }}</span>
                 </div>
-                <div class="auth-input-wrap">
-                    <p class="auth-input-title">
-                        <span class="error-message">＊</span>
-                        パスワード
-                        <i class="fa-solid fa-eye-slash cursor-pointer" @click="togglePassword" ref="eye"></i>
-                    </p>
-                    <input v-model="password" class="auth-input" type="password" @blur="passwordChange"
-                        ref="passwordInput">
-                    <span class="warning">※８文字以上、英語と数字のみ可</span>
-                    <span class="error-message"><br>{{ errors.password }}</span>
-                </div>
                 <input type="hidden" v-model="google_id">
                 <button class="btn btn-register" type="submit" :disabled="!meta.valid || isSubmitting">
                     登録する
@@ -65,10 +54,6 @@ const formSchema = yup.object({
     name_kana: yup.string().matches(/^[\u30A0-\u30FF]+$/, 'カタカナのみ有効です。').required('フリガナは必須項目です。'),
     gender_id: yup.string().required('性別は必須項目です。'),
     email: yup.string().email().required('メールアドレスは必須項目です。'),
-    password: yup.string()
-        .matches(/^[a-zA-Z0-9.?/-]+$/, '英語と数字のみでパスワードを設定してください。')
-        .min(8, 'パスワードの文字数が正しくありません。')
-        .required('パスワードは必須項目です。'),
 })
 
 const { errors, handleSubmit, meta, isSubmitting } = useForm({ validationSchema: formSchema })
@@ -77,7 +62,6 @@ const { value: name, handleChange: nameChange } = useField("name");
 const { value: name_kana, handleChange: nameKanaChange } = useField("name_kana");
 const { value: email } = useField("email", undefined, { initialValue: route.query.email });
 const { value: gender_id, handleChange: genderIdChange } = useField("gender_id");
-const { value: password, handleChange: passwordChange } = useField("password");
 const { value: google_id } = useField("google_id", undefined, { initialValue: route.query.googleId });
 
 const onSubmit = handleSubmit(async (values) => {
@@ -89,20 +73,6 @@ const onSubmit = handleSubmit(async (values) => {
     }
 })
 
-function togglePassword() {
-    const passwordElem = passwordInput.value;
-    const eyeElem = eye.value;
-
-    if (passwordElem.getAttribute('type') === 'password') {
-        passwordElem.setAttribute('type', 'text');
-        eyeElem.classList.toggle('fa-eye');
-        eyeElem.classList.toggle('fa-eye-slash');
-    } else {
-        passwordElem.setAttribute('type', 'password');
-        eyeElem.classList.toggle('fa-eye');
-        eyeElem.classList.toggle('fa-eye-slash');
-    }
-}
 
 
 </script>
