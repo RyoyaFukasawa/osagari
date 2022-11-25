@@ -46,7 +46,7 @@ export const useAuthStore = defineStore("auth", {
                 return error;
             }
         },
-        async sendEmail() {
+        async completeEmail() {
             try {
                 return await axios
                     .get("/api/register/email", {

@@ -20,6 +20,6 @@ onMounted(() => {
 })
 
 const sendEmail = async () => {
-  await authStore.sendEmail();
+  await authStore.completeEmail();
 }
 </script>

@@ -7,6 +7,8 @@ use App\Mail\Auth\RegisterComplete;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -14,7 +16,7 @@ class AuthController extends Controller
     {
         $user = new User();
         $user->fill($request->all())->save();
-        Auth::login($user,true);
+        Auth::login($user);
         $request->session()->regenerate();
 
         return $this->createResponse();
@@ -31,7 +33,8 @@ class AuthController extends Controller
 
     public function completeEmail(Request $request)
     {
-        // Mail::to('test@example.com')->send(new RegisterComplete($user));
+        $user = $request->user();
+        Mail::to($user->email)->send(new RegisterComplete($user));
 
         $this->data = 'メール送信完了';
         return $this->createResponse();
