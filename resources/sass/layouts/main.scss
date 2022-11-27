@@ -25,7 +25,7 @@ main {
       justify-content: center;
       position: relative;
       height: 40px;
-      border: 0.5px solid #000;
+      border: 0.5px solid $BLACK;
       border-radius: 5px;
       padding: 0 8px;
       background-color: #fff;
@@ -54,7 +54,7 @@ main {
     width: 100%;
     padding: 10px 5px;
     outline-color: $YELLOW_GREEN;
-    border: 1px solid #000;
+    border: 1px solid $BLACK;
     border-radius: 5px;
 
     &-wrap {

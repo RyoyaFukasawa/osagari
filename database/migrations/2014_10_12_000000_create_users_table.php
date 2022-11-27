@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('name_kana')->comment('フリガナ');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('gender_id')->comment('性別');
             $table->string('google_id');
             $table->rememberToken();
             $table->timestamps();

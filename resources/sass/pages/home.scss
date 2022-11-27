@@ -1,47 +1,17 @@
-.search {
-    &-wrap {
-        flex-direction: column;
-        padding: 5% 0;
+.search-wrap {
+    flex-direction: column;
+    padding: 5% 0;
 
-        @include sp {
-            height: calc(100% - $HEADER_Ht);
-        }
-    }
-
-    &-form {
-        width: 65%;
-    }
-
-    &-group {
-        display: flex;
-        justify-content: center;
-
-        @include sp {
-            align-items: center;
-            flex-direction: column;
-        }
-    }
-
-    &-box {
-        padding: 8px 10px 8px 10px;
-        background-color: white;
-        border: 2px $YELLOW_GREEN solid;
-        border-radius: 15px;
-        outline-color: $GREEN;
-        margin-right: 5px;
-
-        @include sp {
-            margin-bottom: 15px;
-            width: 100%;
-        }
+    @include sp {
+        height: calc(100% - $HEADER_Ht);
     }
 }
 
 .home-icon {
     @include sp {
-      width: 70%;
+        width: 70%;
     }
 
     width: 25%;
     margin-bottom: 20px;
-  }
+}

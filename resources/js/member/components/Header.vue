@@ -1,18 +1,19 @@
 <template>
     <header class="background">
-        <router-link to="/home" v-if="!matchCurrentPath('/home')" class="icon-wrap">
-            <img class="icon" src="/assets/img/logo_name.png" alt="ロゴ" />
-        </router-link>
+        <div v-if="!matchCurrentPath('/home')" class="d-flex">
+            <router-link to="/home" v-if="!matchCurrentPath('/home')" class="icon-wrap">
+                <img class="icon" src="/assets/img/logo_name.png" alt="ロゴ" />
+            </router-link>
+            <ProductSearchForm></ProductSearchForm>
+        </div>
         <div class="btn-wrap">
-            <router-link to="/sell" class="btn btn-login"
-                :class="matchCurrentPath('/sell') ? 'btn-disable' : ''">
-                <i class="fa-solid fa-box"></i> 
+            <router-link to="/sell" class="btn btn-login" :class="matchCurrentPath('/sell') ? 'btn-disable' : ''">
+                <i class="fa-solid fa-box"></i>
                 出品
             </router-link>
-            <router-link to="/news" class="btn btn-register"
-                :class="matchCurrentPath('/news') ? 'btn-disable' : ''">
+            <router-link to="/news" class="btn btn-register" :class="matchCurrentPath('/news') ? 'btn-disable' : ''">
                 <i class="fa-solid fa-newspaper"></i>
-                 お知らせ
+                お知らせ
             </router-link>
             <router-link to="/logout" class="btn btn-register"
                 :class="matchCurrentPath('/logout') ? 'btn-disable' : ''">
@@ -24,6 +25,7 @@
 
 <script lang="ts" setup>
 import { useRoute } from "vue-router";
+import ProductSearchForm from '../../commonComponents/ProductSearchForm.vue';
 
 const route = useRoute();
 

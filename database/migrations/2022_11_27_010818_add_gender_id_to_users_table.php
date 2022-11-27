@@ -13,16 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mst_courses', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('department_id')->unsigned()->comment('学部ID');
-            $table->string('name')->comment('授業名');
-            $table->softDeletes();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->bigInteger('gender_id')->unsigned()->after('name_kana')->comment('性別ID');
 
-            $table->foreign('department_id')
+            $table->foreign('gender_id')
                 ->references('id')
-                ->on('mst_departments')
+                ->on('mst_genders')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -35,6 +31,11 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mst_courses');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('users_gender_id_foreign');
+            $table->dropColumn([
+                'gender_id'
+            ]);
+        });
     }
 };

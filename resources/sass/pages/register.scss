@@ -7,14 +7,14 @@
   &-input {
     position: relative;
     height: 40px;
-    border: 1px solid #000;
+    border: 1px solid $BLACK;
     border-radius: 5px;
     padding: 0 8px;
     margin-top: 10px;
     background-color: #fff;
     width: 100%;
     &:focus{
-      outline: solid 1px $YELLOW_GREEN;
+      outline: 1px solid $YELLOW_GREEN;
     }
   }
 }

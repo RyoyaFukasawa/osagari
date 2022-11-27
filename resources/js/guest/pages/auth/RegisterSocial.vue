@@ -16,8 +16,7 @@
                 <div class="auth-input-wrap">
                     <p class="auth-input-title"><span class="error-message">＊</span>性別</p>
                     <select v-model="gender_id" class="auth-input" @blur="genderIdChange">
-                        <option value="1">男</option>
-                        <option value="2">女</option>
+                        <option v-for="(value, option) in genderOptions" :value="value">{{ option }}</option>
                     </select>
                     <span class="error-message">{{ errors.gender_id }}</span>
                 </div>
@@ -37,7 +36,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { useRoute, useRouter } from "vue-router";
 import { useAuthStore } from "../../store/auth";
 import { useField, useForm } from 'vee-validate';
@@ -46,8 +44,12 @@ import * as yup from 'yup';
 const route = useRoute();
 const router = useRouter();
 const authStore = useAuthStore();
-const eye = ref();
-const passwordInput = ref();
+const genderOptions = {
+    '男性': 1,
+    '女性': 2,
+    'その他': 3,
+    '回答しない': 4
+};
 
 const formSchema = yup.object({
     name: yup.string().required('氏名は必須項目です。'),

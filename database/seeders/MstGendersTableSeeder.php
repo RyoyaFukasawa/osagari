@@ -15,7 +15,9 @@ class MstGendersTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('mst_genders')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         DB::table('mst_genders')->insert([
             0 => [
