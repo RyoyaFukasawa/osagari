@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrap">
+  <div class="content-wrap-sm">
     <h1 class="title">会員登録ありがとうございます。</h1>
     <div class="content">
       <p class="text-center">ご入力いただいたメールアドレス宛に<br>ご確認メールを送信いたしました。</p>

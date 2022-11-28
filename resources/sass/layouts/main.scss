@@ -1,15 +1,7 @@
 main {
-  height: calc(100% - $HEADER_Ht);
-
   .btn {
-    &-search {
-      padding: 8px 10px 8px 10px;
-      background-color: $GREEN;
-
-
-      @include sp {
-        width: 100%;
-      }
+    @include sp {
+      width: 100%;
     }
 
     &-register {
@@ -43,29 +35,34 @@ main {
     }
   }
 
-  .content-wrap {
-    width: 35%;
-    padding-top: 30px;
-    margin: 0 auto;
+}
+
+.content-wrap-sm {
+  width: 35%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.content-wrap-lg {
+  margin: 0 80px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px 5px;
+  outline-color: $YELLOW_GREEN;
+  border: 1px solid $BLACK;
+  border-radius: 5px;
+
+  &-wrap {
+    &:nth-of-type(n+2) {
+      margin-top: 20px;
+    }
   }
 
-  .input {
-    display: block;
-    width: 100%;
-    padding: 10px 5px;
-    outline-color: $YELLOW_GREEN;
-    border: 1px solid $BLACK;
-    border-radius: 5px;
-
-    &-wrap {
-      &:nth-of-type(n+2) {
-        margin-top: 20px;
-      }
-    }
-
-    &-title {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+  &-title {
+    margin-bottom: 5px;
+    font-weight: bold;
   }
 }

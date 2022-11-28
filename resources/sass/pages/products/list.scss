@@ -1,0 +1,82 @@
+.side {
+    &-menu {
+        width: 20%;
+        padding-top: 30px;
+        padding-right: 30px;
+        border-right: 1px solid $GRAYISH_WHITE;
+    }
+
+    &-title {
+        font-weight: bold;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        background-color: $YELLOW;
+        color: #fff;
+    }
+
+    &-list {
+        &-title {
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid $BLACK;
+            position: relative;
+
+            &:hover {
+                border-bottom: 1.5px solid $YELLOW_GREEN;
+            }
+
+            &::after {
+                position: absolute;
+                right: 10px;
+                font-family: "Font Awesome 5 Free";
+                content: '\f0d7';
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.product {
+    &-list-wrap {
+        padding-top: 30px;
+        padding-left: 30px;
+        width: 80%;
+    }
+
+    &-list {
+        flex-wrap: wrap;
+    }
+
+    &-wrap {
+        flex-direction: column;
+        width: calc(25% - 20px);
+        margin: 0 10px 20px 10px;
+    }
+
+    &-img-wrap {
+        width: 200px;
+        height: 200px;
+        background-color: $GRAYISH_WHITE;
+    }
+
+    &-img{
+        height: 200px;
+    }
+
+    &-title {
+        margin: 10px 0;
+        height: calc($FONT_SIZE * 2);
+    }
+
+    &-text-content {
+        width: 200px;
+    }
+
+    &-price {
+        background-color: $GREEN;
+        padding: 5px 10px;
+        border-radius: 15px;
+        color: #fff;
+    }
+}

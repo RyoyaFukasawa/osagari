@@ -1,5 +1,5 @@
 <template>
-    <div class="content-wrap">
+    <div class="content-wrap-sm">
         <h1 class="title">会員登録</h1>
         <div class="content">
             <form @submit.prevent="onSubmit" class="auth-form">

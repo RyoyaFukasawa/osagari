@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrap">
+  <div class="content-wrap-sm">
     <h1 class="title">ログイン</h1>
     <div class="content">
       <a href="/auth/redirect" class="btn-google d-flex-center" type="submit">

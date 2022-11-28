@@ -17,10 +17,15 @@ const routes = [
         component: () => import("./pages/product/Sell.vue"),
     },
     {
-        path: "/list",
+        path: "/product/list",
         name: "list",
         component: () => import("./pages/product/List.vue"),
     },
+    // {
+    //     path: "/product/{id}",
+    //     name: "list",
+    //     component: () => import("./pages/product/Detail.vue"),
+    // },
     {
         path: "/news",
         name: "news",

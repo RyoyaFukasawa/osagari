@@ -1,5 +1,11 @@
+.btn-search {
+    padding: 8px 10px 8px 10px;
+    background-color: $GREEN;
+}
+
 .search {
-    &-form .main{
+
+    &-form .main {
         width: 65%;
     }
 
@@ -16,11 +22,12 @@
     &-input {
         padding: 8px 10px 8px 10px;
         background-color: white;
-        border: 1px solid $BLACK;
+        border: 1.5px solid $BLACK;
         border-radius: 15px;
         margin-right: 5px;
-        &:focus{
-            outline: 1px solid $YELLOW_GREEN;
+
+        &:focus {
+            outline: 1.5px solid $YELLOW_GREEN;
         }
 
         @include sp {

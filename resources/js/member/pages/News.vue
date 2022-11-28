@@ -1,5 +1,5 @@
 <template>
-    <div class="content-wrap">
+    <div class="content-wrap-sm">
         <h1 class="title">お知らせ</h1>
         <div class="content">
             <ul>
