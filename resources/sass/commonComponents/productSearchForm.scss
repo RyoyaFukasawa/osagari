@@ -21,9 +21,9 @@
 
     &-input {
         padding: 8px 10px 8px 10px;
-        background-color: white;
-        border: 1.5px solid $BLACK;
-        border-radius: 15px;
+        background-color: $WHITE;
+        border: 1px solid $BLACK;
+        border-radius: 30px;
         margin-right: 5px;
 
         &:focus {

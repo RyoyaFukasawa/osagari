@@ -24,7 +24,7 @@
     @vite(['public/assets/css/app.css', 'resources/js/member/app.js'])
 </head>
 
-<body>
+<body class="background">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <div id="app">
     </div>

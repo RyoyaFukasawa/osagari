@@ -28,15 +28,15 @@
         <div class="product-list-wrap">
             <h1 class="title">検索結果</h1>
             <div class="product-list d-flex">
-                <div class="product-wrap d-flex-center">
+                <router-link to="/product/1/detail" class="product-wrap d-flex-center">
                     <div class="product-img-wrap d-flex-center">
                         <img src="/assets/img/テキスト例.jpg" alt="商品画像" class="product-img">
                     </div>
                     <div class="product-text-content">
-                        <p class="product-title subtitle">osagariのロゴ</p>
+                        <p class="product-title subtitle">title</p>
                         <p class="product-price">￥500円</p>
                     </div>
-                </div>
+                </router-link>
                 <div class="product-wrap d-flex-center">
                     <div class="product-img-wrap d-flex-center">
                         <img src="/assets/img/テキスト例.jpg" alt="商品画像" class="product-img">
